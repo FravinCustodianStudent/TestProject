@@ -1,9 +1,7 @@
 package com.example.demo.controllers;
 
-import ch.qos.logback.core.joran.conditional.IfAction;
 import com.example.demo.DTO.PersonDTO;
 import com.example.demo.repositories.PersonRepository;
-import jakarta.persistence.Id;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -17,7 +15,7 @@ public class PersonController {
     @Autowired
     private PersonRepository personRepository;
 
-    @GetMapping("/Person/{Id}")
+    @GetMapping("/person/{Id}")
     public PersonDTO GetPersonById(@PathVariable int Id){
 
         try {
